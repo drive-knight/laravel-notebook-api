@@ -15,6 +15,6 @@ class NotebookSeeder extends Seeder
      */
     public function run()
     {
-        Notebook::factory()->count(1)->create();
+        Notebook::factory()->count(30)->create();
     }
 }

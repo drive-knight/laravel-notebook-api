@@ -26,7 +26,7 @@ class NotebookRequest extends FormRequest
         return [
             'full_name' => 'required|max:60|string',
             'company' => 'nullable|max:60|string',
-            'phone' => 'required|max:14|string',
+            'phone' => 'required|string|regex:/^\\+?[1-9][0-9]{5,14}$/',
             'email' => 'required|max:60|email|string',
             'date_of_birth' => 'nullable|date',
             'photo_path' => 'nullable|string'
