@@ -3,11 +3,11 @@
  ### /api/documentation/v1  
  *Swagger документация методов Notebook Api*   
   
- ### /api/v1/notebook{?page={page}}  
+ ### /api/v1/notebook{?page={p}&per_page={pp}}  
  **Разрешенные методы:** GET  
  **Параметры**:  
- "Необязательные": 	{"page": int}  
- *Получить все записи*  
+ "Необязательные": 	{"p": int, "pp": int}  *Если параметры не указаны, по умолчанию page=1, per_page=50  
+ *Получить все записи* 
  
  ### /api/v1/notebook  
  **Разрешенные методы:** POST  
