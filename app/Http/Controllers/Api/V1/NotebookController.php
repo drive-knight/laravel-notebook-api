@@ -70,8 +70,12 @@ class NotebookController extends Controller
      */
     public function index(Request $request)
     {
-        $items = $request->query('per_page', 50);
-        return NotebookResource::collection(Notebook::paginate($items));
+        $items = $request->query('per_page');
+        if (preg_match('/^\\d+$/', $items))
+        {return NotebookResource::collection(Notebook::paginate($items));}
+        else
+        {return NotebookResource::collection(Notebook::paginate(50));}
+
     }
 
     /**
