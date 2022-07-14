@@ -19,21 +19,17 @@
  *Добавить запись*  
  
  ### /api/v1/notebook/{id}  
- **Разрешенные методы:** GET  
- **Параметры**:  
- "Обязательные": 	{"id": int}  
+ **Разрешенные методы:** GET   
  *Получить выбранную запись*  
  
  ### /api/v1/notebook/{id}  
  **Разрешенные методы:** PUT/PATCH  
  **Параметры**:  
- "Обязательные":	{"id": int, "full_name: "varchar60", "phone": "varchar14|min5|integer", "email": "varchar60|email"}  
+ "Обязательные":	{"full_name: "varchar60", "phone": "varchar14|min5|integer", "email": "varchar60|email"}  
  "Необязательные": 	{"company": "varchar60", "date_of_birth": "date|YY-mm-dd", "photo_path": "varchar"}  
  *Редактировать выбранную запись*  
 
  ### /api/v1/notebook/{id}  
  **Разрешенные методы:** DELETE  
- **Параметры**:  
- "Обязательные": 	{"id": int}  
  *Удалить выбранную запись*  
  
